@@ -1,15 +1,16 @@
-package com.nrk.ribbontimeapp;
+package com.nrk.weatherapp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 @SpringBootApplication
+@EnableCircuitBreaker
 @EnableDiscoveryClient
-//@RibbonClient(name="time-service")
-public class RibbonTimeAppApplication {
+public class WeatherAppApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(RibbonTimeAppApplication.class, args);
+		SpringApplication.run(WeatherAppApplication.class, args);
 	}
 }
